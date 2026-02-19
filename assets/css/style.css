@@ -1,0 +1,316 @@
+/* Google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* CSS Variables */
+:root {
+    --primary-font: "Roboto", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+    --primary-color: #1a1a1a; /* dark charcoal */
+    --secondary-color: #ff8c00; /* dark orange */
+    --highlight-color: #ff6b35; /* vibrant orange */
+    --highlight-color-light: #ffa500; /* bright orange */
+}
+
+/* Global styles */
+body {
+    font-family: var(--primary-font);
+    padding-top: 57.15px;
+    background-image: url("../images/stock.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+.sub-heading-color {
+    color: var(--highlight-color);
+}
+
+.section {
+    padding-top: 4rem;
+}
+
+/* Buttons */
+.custom-button-filled {
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.custom-button-filled:hover {
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.custom-button-outline {
+    border: 3px solid var(--highlight-color);
+    padding: 7px 25px;
+    color: var(--highlight-color);
+}
+
+.custom-button-outline:hover {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+/* Navbar */
+#navbar {
+    background-color: var(--primary-color);
+}
+
+#navbar .logo {
+    width: 30px;
+}
+
+/* Header */
+.hero-section {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-section .container,
+.testimonial-card {
+    position: relative;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero-section .container {
+    padding: 2rem;
+    text-align: center;
+}
+
+#header .lead {
+    font-family: var(--secondary-font);
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.hero-section p:not(.sub-heading-color) {
+    color: white;
+}
+
+/* Services */
+#services .card-footer {
+    font-weight: bold;
+    color: var(--highlight-color);
+    background-color: transparent;
+}
+
+#services .card,
+.faq-card {
+    margin-bottom: 1.5rem;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#services .card {
+    border: 2px solid #1a1a1a;
+    position: relative;
+}
+
+#services .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials */
+#testimonials {
+    position: relative;
+    z-index: 3;
+}
+
+.testimonial-card {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.testimonial-author h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    text-transform: none;
+}
+
+.testimonial-author p {
+    color: var(--highlight-color);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+#testimonialCarousel {
+    position: relative;
+    padding-bottom: 4rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    top: 65%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 30px;
+}
+
+.carousel-control-next {
+    right: 30px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--highlight-color);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-indicators button {
+    background-color: var(--highlight-color);
+}
+
+.carousel-indicators button.active {
+    background-color: var(--secondary-color);
+}
+
+/* FAQ */
+#faq {
+    position: relative;
+    z-index: 3;
+}
+
+.faq-card {
+    background-color: rgba(255, 255, 255);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.faq-question {
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: none;
+}
+
+.faq-answer {
+    color: #333;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Footer / contact */
+#contact {
+    background-color: var(--primary-color);
+    color: white;
+    padding-bottom: 3rem;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact .sub-heading-color {
+    color: var(--highlight-color-light);
+}
+
+#contact i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#contact .social-links i {
+    color: var(--highlight-color-light);
+    font-size: 1.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact .social-links i:hover {
+    color: var(--secondary-color);
+}
+
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+/* Media queries */
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    #services .card-body {
+        min-height: 191px;
+    }
+}
+
+/* Large devices (small laptops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #services .card-body {
+        min-height: auto;
+    }
+}
+
+/* xl devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    #services .card-body {
+        min-height: 220px;
+    }
+}
